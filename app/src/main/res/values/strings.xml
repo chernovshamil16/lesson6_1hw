@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AS1 W6</string>
+    <string name="пишите">пишите</string>
+    <string name="toast">EditText не может быть пустым</string>
+</resources>
