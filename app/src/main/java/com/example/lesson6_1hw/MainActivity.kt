@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK && result.data != null) {
                     val data =
-                        result.data?.getStringExtra(SecondActivity.KEYFORDATA)
+                        result.data?.getStringExtra(SecondActivity.KeyFordata)
                     binding.et.setText(data)
                 }
             }
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this , R.string.toast , Toast.LENGTH_SHORT).show()
             }else {
                 Intent(this@MainActivity , SecondActivity::class.java).apply {
-                    putExtra(KEYFORINTENT , binding.et.text.toString())
+                    putExtra(KEYforINTENT , binding.et.text.toString())
                     launcherData.launch(this)
                 }
             }
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val KEYFORINTENT = "DataKey"
+        const val KEYforINTENT = "DataKey"
     }
 
 

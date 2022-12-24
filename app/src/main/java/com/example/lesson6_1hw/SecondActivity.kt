@@ -18,7 +18,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
-        val desc = intent.getStringExtra(MainActivity.KEYFORINTENT)
+        val desc = intent.getStringExtra(MainActivity.KEYforINTENT)
         binding.et.setText(desc)
 
         binding.btn.setOnClickListener {
@@ -28,7 +28,7 @@ class SecondActivity : AppCompatActivity() {
                 Toast.makeText(this , R.string.toast , Toast.LENGTH_SHORT).show()
             }else {
                 Intent(this@SecondActivity , MainActivity::class.java).apply {
-                    putExtra(KEYFORDATA , data)
+                    putExtra(KeyFordata , data)
                     setResult(RESULT_OK , this)
                     finish()
                 }
@@ -37,6 +37,6 @@ class SecondActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val KEYFORDATA = "key"
+        const val KeyFordata = "key"
     }
 }
